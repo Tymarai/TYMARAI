@@ -3,90 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to My Website!">
+    <meta name="description" content="Welcome to My Modern Website!">
     <title>My Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            margin-bottom: 30px;
         }
         header {
-            background: #0078d7;
+            background: linear-gradient(135deg, #007bff, #0056b3);
             color: #fff;
-            padding: 1rem 0;
+            padding: 60px 20px;
             text-align: center;
         }
-        nav {
-            text-align: center;
-            background: #333;
-            color: #fff;
-            padding: 0.5rem 0;
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
         }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 1rem;
-            max-width: 800px;
-            margin: 2rem auto;
-            background: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        .content-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: none;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
         }
         footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #333;
+            margin-top: 30px;
+            background-color: #343a40;
             color: #fff;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .hidden {
-            display: none;
+            text-align: center;
+            padding: 15px 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <nav>
-        <a href="#" onclick="showPage('home')">Home</a>
-        <a href="#" onclick="showPage('about')">About</a>
-        <a href="#" onclick="showPage('contact')">Contact</a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#" onclick="showPage('home')">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('about')">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <main>
-        <section id="home">
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Welcome to My Modern Website</h1>
+            <p>A simple, elegant design using Bootstrap</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div id="home" class="content-card">
             <h2>Home</h2>
             <p>Hello! This is the home page of my basic website hosted on GitHub Pages. Feel free to customize it and make it your own.</p>
-        </section>
-        <section id="about" class="hidden">
+        </div>
+        <div id="about" class="content-card d-none">
             <h2>About</h2>
             <p>This website is created as a simple template to help you get started with hosting on GitHub Pages. You can add more content here about yourself or your project.</p>
-        </section>
-        <section id="contact" class="hidden">
+        </div>
+        <div id="contact" class="content-card d-none">
             <h2>Contact</h2>
             <p>If you’d like to get in touch, you can add your contact information or a form here.</p>
-        </section>
-    </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 My Website</p>
+        <p>&copy; 2025 My Website | Designed with Bootstrap</p>
     </footer>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function showPage(page) {
-            document.querySelectorAll('section').forEach(section => {
-                section.classList.add('hidden');
+            document.querySelectorAll('.content-card').forEach(section => {
+                section.classList.add('d-none');
             });
-            document.getElementById(page).classList.remove('hidden');
+            document.getElementById(page).classList.remove('d-none');
         }
     </script>
 </body>
 </html>
+
