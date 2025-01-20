@@ -3,107 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Tymarai!">
-    <title>Tymarai</title>
+    <meta name="description" content="Shop natural honey, oils, amlou, argan, shea butter, herbs, and tea.">
+    <title>Organic Treasures - Shop Natural Products</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #fff7f9;
+            font-family: Arial, sans-serif;
+            background-color: #f9f6f2;
+            color: #333;
         }
-        .navbar {
-            margin-bottom: 30px;
-        }
-        header {
-            background: linear-gradient(135deg, #ff9aa2, #f7a1d7);
+        .hero {
+            background: url('https://via.placeholder.com/1920x600') center/cover no-repeat;
             color: #fff;
-            padding: 60px 20px;
             text-align: center;
+            padding: 100px 20px;
         }
-        header h1 {
-            font-size: 2.8rem;
+        .hero h1 {
+            font-size: 3rem;
             font-weight: bold;
         }
-        .content-card {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .btn-custom {
+            background-color: #d4a373;
+            color: #fff;
             border: none;
-            padding: 20px;
-            background-color: #ffffff;
+        }
+        .btn-custom:hover {
+            background-color: #b2835d;
+        }
+        .product-card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .product-card img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .testimonial {
+            background-color: #d4a373;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
             border-radius: 10px;
         }
         footer {
-            margin-top: 30px;
-            background-color: #dca1ff;
+            background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 15px 0;
+            padding: 20px;
+            margin-top: 30px;
         }
-        .nav-link {
-            color: #ff9aa2 !important;
-        }
-        .nav-link.active {
-            color: #f7a1d7 !important;
-            font-weight: bold;
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffb6c1;">
-        <div class="container">
-            <a class="navbar-brand" href="#" style="color: #ff69b4; font-weight: bold;">Tymarai</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#" onclick="showPage('home')">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('about')">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('contact')">Contact</a></li>
-                </ul>
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Welcome to Organic Treasures</h1>
+    <p>Discover natural honey, oils, amlou, argan, shea butter, herbs, and tea.</p>
+    <a href="#products" class="btn btn-custom btn-lg">Shop Now</a>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Products</h2>
+        <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Honey" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pure Honey</h5>
+                        <p class="card-text">100% organic honey, straight from nature.</p>
+                        <a href="#" class="btn btn-custom">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Argan Oil" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Argan Oil</h5>
+                        <p class="card-text">Premium argan oil for skin and hair care.</p>
+                        <a href="#" class="btn btn-custom">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Amlou" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Amlou</h5>
+                        <p class="card-text">A traditional Moroccan spread made with love.</p>
+                        <a href="#" class="btn btn-custom">Buy Now</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <h1>Welcome to Tymarai</h1>
-            <p>A space of creativity and beauty</p>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <div class="container">
-        <div id="home" class="content-card">
-            <h2>Home</h2>
-            <p>Hello! This is the home page of Tymarai, a beautiful website hosted on GitHub Pages. Feel free to explore and enjoy the design!</p>
-        </div>
-        <div id="about" class="content-card d-none">
-            <h2>About</h2>
-            <p>Tymarai is a platform designed with elegance and creativity in mind. You can customize it to reflect your unique style and story.</p>
-        </div>
-        <div id="contact" class="content-card d-none">
-            <h2>Contact</h2>
-            <p>We'd love to hear from you! Add your contact information or create a form to stay connected.</p>
-        </div>
     </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Tymarai | Crafted with love and creativity</p>
-    </footer>
+<!-- Testimonial Section -->
+<section class="testimonial my-5">
+    <h2>What Our Customers Say</h2>
+    <p>"I love the quality of their honey and oils! Everything feels so natural and fresh."</p>
+    <p>- A Happy Customer</p>
+</section>
 
-    <!-- Bootstrap JS and Dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function showPage(page) {
-            document.querySelectorAll('.content-card').forEach(section => {
-                section.classList.add('d-none');
-            });
-            document.getElementById(page).classList.remove('d-none');
-        }
-    </script>
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Get in Touch</h2>
+        <form>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-custom">Send Message</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Organic Treasures. All Rights Reserved.</p>
+    <div class="social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
